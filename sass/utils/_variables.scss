@@ -1,0 +1,40 @@
+$colour-secondary: #001534;
+$colour-primaire: #9356DC;
+$colour-secondaire: #FF79DA;
+$colour-terciaire: #c5c7c7;
+$colour-quaternaire: #f0efef;
+$colour-hover: #99E2D0;
+$colour-white: #fff;
+$colour-black: #000000;
+
+$shadow-color: rgb(148, 146, 146);
+$gradient: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+
+$font-size: (
+    nouveau:13px,
+    footer-size:13px,
+    localisation-titre:14px,
+    numero-size:14px,
+    titre-resto:15px,
+    ss-titre:15px,
+    titre:20px,
+);
+
+
+$shadow1: 3px 2px 10px;
+$shadow2: 1px 1px 9px;
+$shadow3: 3px 2px 8px;
+
+$padding1: 29px 50px 25px 50px;
+$padding2: 13px 20px 13px 20px;
+$padding3: 10px 15px 10px 30px;
+$padding4: 13px 30px 13px 30px;
+
+$radius: 20px 50px;
+
+
+
+$breakpoints: (
+    tablette: 600px,
+    desktop: 900px,
+);

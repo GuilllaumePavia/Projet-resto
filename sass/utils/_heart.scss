@@ -1,0 +1,23 @@
+
+
+/* Les coeurs*/ 
+.heart .fa-solid {
+    display:none;
+
+    @include tablette-only {
+        margin-left: 20px;
+    }
+}
+
+.heart:hover{
+    color:#a176e3 ;
+}
+
+.heart:hover .fa-regular {
+    display: none;
+    
+}
+
+.heart:hover .fa-solid {
+    display: inline-block;
+}

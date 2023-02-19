@@ -1,0 +1,36 @@
+.reservation {
+    background-color: $colour-quaternaire;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    text-align: center;
+
+
+    &__titre {
+        width: 65%;
+        font-size: map-get($font-size, titre);
+        font-weight: 850;
+        color: $colour-secondary;
+
+        @include tablette-only {
+            width: 100%;
+            font-size: 30px;
+        }
+    }
+
+    &__sous-titre {
+        font-weight: 100;
+        width: 90%;
+        font-size: map-get($font-size, ss-titre);
+        color: $colour-secondary;
+    }
+
+    &__boutton {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        @include btn;
+    }
+}

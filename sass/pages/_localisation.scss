@@ -1,0 +1,15 @@
+.localisation {
+    background: linear-gradient(180deg, rgb(147, 147, 147) 0%, #e3e1e1 20%);
+    background-color: $colour-terciaire;
+    display: flex;
+    justify-content: center;
+    font-size: map-get($font-size, localisation-titre);
+    padding: 20px 10px 10px 10px;
+    font-weight: 400;
+    z-index: -1000;
+
+    &__texte i {
+        position: relative;
+        right: 8%;
+    }
+}

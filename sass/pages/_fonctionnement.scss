@@ -1,0 +1,42 @@
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 10px 50px 10px;
+  
+    @include tablette-only {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &__titre {
+        align-self: flex-start;
+        font-size: map-get($font-size, titre);
+        margin-left: 15px;
+
+        @include tablette-only {
+            margin-left: 50%;
+            margin-bottom: 10px;
+            transform: translateX(-50%);
+        }
+
+        @include desktop-only {
+            align-self: flex-start;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            margin-left: 300px;
+        }
+    }
+
+    &__titre--weight {
+        font-weight: 600;
+    }
+
+
+}

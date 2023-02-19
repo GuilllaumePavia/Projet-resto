@@ -1,0 +1,61 @@
+
+
+
+
+
+/* Le loader */
+.loader {
+    border: 16px solid #bdc3c7;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 40%;
+    left: 30%;
+    position: fixed;
+    animation: chargeur 3s linear infinite;
+    opacity: 0;
+
+    @include tablette-only {
+        left: 40%;
+        top: 30%;
+    }
+
+    @include desktop-only {
+        left: 45%;
+        top: 45%;
+    }
+}
+
+@keyframes chargeur {
+    0% {
+        transform: rotate(0deg) scale(1);
+        border-top-color: #388572;
+        border-bottom-color: #388572;
+        opacity: 1;
+    }
+
+    25% {
+        border-top-color: #9256dc;
+        border-bottom-color: #9256dc;
+    }
+
+    50% {
+        transform: rotate(360deg) scale(1.15);
+
+        border-top-color: #FF79DA;
+        border-bottom-color: #FF79DA;
+    }
+
+    75% {
+        border-top-color: #388572;
+        border-bottom-color: #388572;
+    }
+
+    100% {
+        transform: rotate(720deg) scale(1);
+        border-top-color: #9256dc;
+        border-bottom-color: #9256dc;
+        opacity: 0;
+    }
+}
+

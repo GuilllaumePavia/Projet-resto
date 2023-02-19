@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // 10px div by def of 16px
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: 'roboto';
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*.loader {
+    border: 16px solid #bdc3c7;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 40%;
+    left: 44%;
+    position: fixed;
+    animation: chargeur 3s linear infinite;
+    opacity: 0;
+}*/
+
+button {
+    cursor: pointer;
+}

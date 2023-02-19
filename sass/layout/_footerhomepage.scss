@@ -1,0 +1,93 @@
+.footerhomepage {
+    padding: 25px 25px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    color: $colour-white;
+    background-color: rgb(59, 59, 59);
+    
+
+
+    @include tablette-only {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        padding: 15px 20px 0px 60px;
+        gap: 0px;
+
+    }
+
+    @include desktop-only {
+        padding: 10px 0px 0px 0px;
+        gap: 80px;
+    }
+
+
+    &__flex {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: map-get($font-size, footer-size);
+
+        @include tablette-only {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 20px 20px 20px 20px;
+            justify-content: flex-end;
+            gap: 30px;
+            flex-basis: 150%;
+            font-size: 15px;
+            margin-left: 40px;
+        }
+
+        @include desktop-only {
+            justify-content: flex-start;
+            margin-right: 60px;
+            gap: 84px;
+        }
+
+
+    }
+
+    &__flex2 {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        @include tablette-only {
+            flex-direction: row;
+            gap: 14px;
+        }
+
+        @include desktop-only {
+            flex-direction: row;
+            gap: 84px;
+        }
+    }
+
+
+    &__flex2 :nth-child(1) {
+        font-weight: 850;
+        display: flex;
+        flex-direction: row;
+        gap: 9px;
+    }
+
+    &__flex2 :nth-child(2) {
+        font-weight: 850;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    &__flex--font {
+        color: $colour-white;
+        font-size: 16px;
+        font-family: Shrikhand;
+    }
+
+    &__flex2--icone {
+        transform: rotate(-60deg);
+    }
+
+}

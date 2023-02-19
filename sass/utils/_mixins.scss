@@ -1,0 +1,67 @@
+@mixin btndeux {
+    font-size: nth($font-size, 1);
+    padding: $padding1;
+    border-radius: nth($radius, 1);
+    border: none;
+    background-color: $colour-quaternaire;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include shadow;
+    cursor: pointer;
+}
+
+@mixin btn {
+    border-radius: nth($radius, 2);
+    border: none;
+    color: $colour-white;
+    padding: $padding2;
+    background: $gradient;
+    cursor: pointer;
+}
+
+@mixin btn-page-menu {
+    border-radius: nth($radius, 2);
+    border: none;
+    color: $colour-white;
+    padding: $padding4;
+    background: $gradient;
+    cursor: pointer;
+}
+
+
+@mixin box-texte {
+    padding: 10px;
+    font-size: map-get($font-size, titre-resto);
+    background-color: $colour-white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: $colour-black;
+}
+
+@mixin box-plat {
+    gap: 5px;
+    padding: $padding3;
+    background-color: $colour-white;
+    font-size: 16px;
+    @include shadow;
+    border-radius: 20px;
+    color: $colour-black;
+}
+
+@mixin shadow($shadow: $shadow1, $color: $shadow-color ) {
+    box-shadow: $shadow $shadow-color;
+}
+
+
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, tablette)) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
