@@ -10,6 +10,7 @@
     position: relative;
     top: -50px;
     padding-bottom: 40px;
+   
 
     @include tablette-only {
         width: 70%;
@@ -76,9 +77,24 @@
     
     &__titre {
         display: flex;
-        gap: 50px;
+        justify-content: center;
+        gap: 5px;
         font-size: 16px;
         font-family: Shrikhand;
+        width: 110%;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+
+        @include tablette-only {
+            gap: 15px; 
+        }
+
+        @include desktop-only {
+            gap: 25px; 
+        }
+
+        
     }
 
     &__titre i {
@@ -107,9 +123,11 @@
     &__box {
         width: 90%;
         @include box-plat;
-        position: relative;
+        display: flex;
+        width: 90%;
         overflow: hidden;
-        padding: 10px; 
+        position:relative;
+         
     }
     
 
@@ -117,40 +135,54 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-       
-
-    &--titreweight {
-        font-weight: 500;   
-    }
-
-    &--sstitreweight {
-        font-weight: 100;  
-        margin-top: 70px; 
-    }
+        width: 100%;
+        
+  
+ 
 
     &--prixflex{
-        align-self: flex-end;    
+        align-self: flex-end;  
+        padding: 0;
+        margin: 0;
+        padding-right:10px;
+        padding-bottom:15px;
+        
     }
 }
 
 &__point{
-    display:inline-block;
-    width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100px; 
+    padding: 16px;
     @include tablette-only {
-        width: 300px;  
+    width: 400px; 
+
     }
     
 
     &--h4{
+        overflow: hidden;
+        white-space: nowrap;
         text-overflow: ellipsis;
-        overflow:hidden;
-        white-space: nowrap; 
+        width: 200px;
+        @include tablette-only {
+            width: 400px; 
+            }
+ 
     }
 
     &--span{
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
         text-overflow: ellipsis;
-        overflow:hidden;
-        white-space: nowrap; 
+        width: 200px;
+        @include tablette-only {
+            width: 400px; 
+            }
+
     }
 }
 
@@ -164,12 +196,10 @@
     left: 117%;
     opacity: 1;
     top: 0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    transition: .5s ease-in;
+    border-radius: 0 20px 20px 0;
+    transition: 0.5s ease-in;
     transform: translateX(-100%);
+
 
     &--circle{
     opacity: 0;
@@ -189,8 +219,9 @@
   .menu__box:hover .menu__bell {
     opacity: 1;
     left: 100%;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    transition: .5s ease-in;
+    
+  
 }
 
 .menu__box:hover .menu__bell--circle {
@@ -199,7 +230,10 @@
 
 .menu__box:hover .menu__bell--prix {
     transition: .5s ease-in;
-    transform: translateX(-160%);
+    transform: translateX(-130%);
+    
+   
+     
 
 }
 
