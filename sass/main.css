@@ -58,6 +58,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   transition: background-image 0.3s ease-in;
+  scale: 0.4;
+  position: relative;
+  top: -15px;
 }
 .heart:hover {
   background-image: url("../../Images et textes Ohmyfood/images/logo/heart.svg");
@@ -214,9 +217,6 @@ button {
     margin-top: -30px;
   }
 }
-.vignette__texte-container--weight {
-  font-weight: 800;
-}
 .vignette__titlebox {
   display: flex;
   justify-content: space-between;
@@ -236,14 +236,18 @@ button {
     margin-left: 0px;
   }
 }
+.vignette__titlebox h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
 @media screen and (min-width: 600px) {
-  .vignette__titlebox p {
+  .vignette__titlebox h3 {
     margin-left: 50%;
     transform: translateX(-50%);
   }
 }
 @media screen and (min-width: 900px) {
-  .vignette__titlebox p {
+  .vignette__titlebox h3 {
     margin-left: 0%;
     transform: translateX(0%);
   }
@@ -305,7 +309,7 @@ button {
 }
 .headerhomepage__img {
   margin-left: 50%;
-  transform: translateX(-55%);
+  transform: translateX(-60%);
 }
 
 .footer {
@@ -320,7 +324,6 @@ button {
   .footer {
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
     padding: 15px 20px 0px 60px;
     gap: 0px;
   }
@@ -406,7 +409,6 @@ button {
   .footerhomepage {
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
     padding: 15px 20px 0px 60px;
     gap: 0px;
   }
