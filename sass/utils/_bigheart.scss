@@ -1,18 +1,14 @@
 
 
 /* Les coeurs*/ 
-.heart {
+.bigheart {
     background-image: url("../../Images\ et\ textes\ Ohmyfood/images/logo/heart-outline.svg");
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
     background-size: cover;
     transition: background-image 0.3s ease-in;
-    scale:0.4;
-    position: relative;
-    top: -15px;
-    background-color: aqua;
-
+    scale:0.8;
     &:hover{
         background-image: url("../../Images\ et\ textes\ Ohmyfood/images/logo/heart.svg");
         cursor: pointer;

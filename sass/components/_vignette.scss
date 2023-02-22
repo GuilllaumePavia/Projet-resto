@@ -84,36 +84,23 @@
 
     &__texte-container {
         display: flex;
-        flex-direction: column;
-        gap: 6px;
-        align-items: flex-start;
+        flex-direction: row;
         @include box-texte;
         margin-top: -30px;
 
-        @include tablette-only {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 0px;
-            align-items: center;
-            margin-top: -30px;
-     
-     
-        }
 
-       
+        @include tablette-only {
+        }  
     }
 
 
     &__titlebox {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         width: 90%;
-        
-
+        gap: 10px;
         @include tablette-only {
-            width: 90%;
-            margin-bottom: 5px;
+   
         }
 
         @include desktop-only {
@@ -128,8 +115,7 @@
         font-size: 16px;
         font-weight: bold;
         @include tablette-only {
-            margin-left: 50%;
-            transform: translateX(-50%);
+            
         }
 
         @include desktop-only {

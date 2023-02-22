@@ -33,8 +33,10 @@
 
     &--orga{
             display: flex;
+            justify-content:center;
             color: black;
         font-size: nth($font-size, 1);
+       
        
         @include tablette-only {
             font-size: 14px;
