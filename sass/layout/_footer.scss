@@ -44,7 +44,11 @@
             margin-right: 60px;
             gap: 84px;
         }
-
+        &-font {
+            color: $colour-white;
+            font-size: 16px;
+            font-family: Shrikhand;
+        }
 
     }
 
@@ -61,6 +65,9 @@
         @include desktop-only {
             flex-direction: row;
             gap: 84px;
+        }
+        &--icone {
+            transform: rotate(-60deg);
         }
     }
 
@@ -79,14 +86,8 @@
         gap: 5px;
     }
 
-    &__flex--font {
-        color: $colour-white;
-        font-size: 16px;
-        font-family: Shrikhand;
-    }
+    
 
-    &__flex2--icone {
-        transform: rotate(-60deg);
-    }
+   
 
 }

@@ -85,50 +85,25 @@
     &__texte-container {
         display: flex;
         flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
         @include box-texte;
         margin-top: -30px;
-
-
-        @include tablette-only {
-        }  
+        padding: 0 10px;
+       
     }
 
 
     &__titlebox {
         display: flex;
         flex-direction: column;
-        width: 90%;
-        gap: 10px;
-        @include tablette-only {
-   
-        }
+       
 
-        @include desktop-only {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-left: 0px;
-        }
     }
 
     &__titlebox h3 {
         font-size: 16px;
-        font-weight: bold;
-        @include tablette-only {
-            
-        }
-
-        @include desktop-only {
-            margin-left: 0%;
-            transform: translateX(0%);
-        }
-    }
-
-    &__titlebox--soustitre {
-       
-        @include desktop-only {
-            width: 100%;
-        }
+        
     }
 
 

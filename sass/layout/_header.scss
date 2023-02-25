@@ -6,6 +6,7 @@
     z-index: 1000;
     font-family: Shrikhand;
     font-size: 28px;
+    border: 2px solid green;
 
     @include tablette-only {
         font-size: 48px;

@@ -163,9 +163,7 @@
     
 
     &--h4{
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        @include petits-points;
         width: 200px;
         @include tablette-only {
             width: 400px; 
@@ -175,9 +173,7 @@
 
     &--span{
         display: block;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        @include petits-points;
         width: 200px;
         @include tablette-only {
             width: 400px; 
@@ -232,11 +228,7 @@
     transition: .5s ease-in;
     transform: translateX(-130%);
     
-   
-     
-
 }
-
 
     &__boutton {
         @include btn-page-menu;

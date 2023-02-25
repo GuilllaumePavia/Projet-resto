@@ -1,12 +1,8 @@
 @mixin btndeux {
     font-size: nth($font-size, 1);
-    padding: $padding1;
     border-radius: nth($radius, 1);
     border: none;
     background-color: $colour-quaternaire;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     @include shadow;
     cursor: pointer;
 }
@@ -64,4 +60,10 @@
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
+}
+
+@mixin petits-points {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
