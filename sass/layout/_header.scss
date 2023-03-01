@@ -1,18 +1,14 @@
-.header {
-    display: flex;
-    justify-content: center;
-    padding: 12px 15px 10px 15px;
-    background-color: $colour-white;
-    z-index: 1000;
-    font-family: Shrikhand;
-    font-size: 28px;
-    border: 2px solid green;
 
-    @include tablette-only {
-        font-size: 48px;
-    }
 
-    @include desktop-only {
-        font-size: 48px;
-    }
+.headerhomepage {
+    display: flex; 
+    justify-content: flex-start;
+    padding: 15px;
+    margin-top: 10px;
+    
+
+  &__img {
+    margin-left: 50%;
+    transform: translateX(-60%);
+}
 }
