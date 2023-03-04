@@ -16,15 +16,15 @@
     cursor: pointer;
 }
 
-@mixin btn-page-menu {
-    border-radius: nth($radius, 2);
-    border: none;
-    color: $colour-white;
-    padding: $padding4;
-    background: $gradient;
-    cursor: pointer;
-}
-
+@mixin btn2($state) {
+$palette: map-get($style-btn, $state);
+background: map-get($palette, bg);
+border-radius: nth($radius, 2);
+border: none;
+color: $colour-white;
+padding: $padding2;
+box-shadow: $shadow1;
+    }
 
 @mixin box-texte {
     padding: 10px;

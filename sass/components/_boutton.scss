@@ -1,0 +1,10 @@
+.boutton {
+    @include btn2(active);
+   
+}
+
+.boutton :hover {
+    @include shadow;
+    @include btn2(hover);
+}
+

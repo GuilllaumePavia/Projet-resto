@@ -10,14 +10,27 @@ $colour-black: #000000;
 
 $shadow-color: rgb(148, 146, 146);
 $gradient: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+$gradient2: linear-gradient(180deg, #f798dc 0%, #986bcf 100%);
+
+$style-btn : (
+    active: (
+     bg: $gradient,
+    )
+    ,
+    hover: (
+    bg: $gradient2,
+    )
+);
+
 
 $font-size: (
-    nouveau:13px,
+    
     footer-size:13px,
     localisation-titre:14px,
     numero-size:14px,
     titre-resto:15px,
     ss-titre:15px,
+    titre-plat:16px,
     titre:20px,
 );
 

@@ -78,7 +78,7 @@
     &__titre {
         display: flex;
         justify-content: center;
-        
+        gap: 20px;
         font-size: 16px;
         font-family: Shrikhand;
         width: 110%;
@@ -198,13 +198,14 @@
 
 
     &--circle{
-    opacity: 0;
+    
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 45%;
     margin: auto;
     color: $colour-white;
+    rotate:200deg;
+    transition: 0.1s ease-in;
+    scale: 1.5;
     }
 
     &--prix{
@@ -221,7 +222,8 @@
 }
 
 .menu__box:hover .menu__bell--circle {
-    opacity: 1;
+    rotate:0deg;
+    transition: .7s ease-in;
 }
 
 .menu__box:hover .menu__bell--prix {
@@ -230,9 +232,5 @@
     
 }
 
-    &__boutton {
-        @include btn-page-menu;
-    }
-
-
 }
+

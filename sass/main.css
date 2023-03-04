@@ -52,35 +52,44 @@
 }
 /* Les coeurs*/
 .heart {
-  background-image: url("../../Images et textes Ohmyfood/images/logo/heart-outline.svg");
+  background-image: url("../imagesEtTextesOhmyfood/images/logo/sprite.svg");
   width: 29px;
   height: 28px;
   background-repeat: no-repeat;
-  background-size: cover;
   transition: background-image 0.3s ease-in;
   position: relative;
-  top: -10px;
 }
 .heart:hover {
-  background-image: url("../../Images et textes Ohmyfood/images/logo/heart.svg");
+  animation: sprite 1s steps(4);
   cursor: pointer;
 }
 
+@keyframes sprite {
+  100% {
+    background-position: -168px;
+  }
+}
 /* Les coeurs*/
 .bigheart {
-  background-image: url("../../Images et textes Ohmyfood/images/logo/heart-outline.svg");
-  width: 50px;
-  height: 50px;
+  background-image: url("../imagesEtTextesOhmyfood/images/logo/sprite.svg");
+  width: 35px;
+  height: 35px;
   background-repeat: no-repeat;
-  background-size: cover;
   transition: background-image 0.3s ease-in;
-  scale: 0.8;
+  position: relative;
+  scale: 1.5;
+  top: 15px;
 }
 .bigheart:hover {
-  background-image: url("../../Images et textes Ohmyfood/images/logo/heart.svg");
+  animation: bigsprite 1s steps(4);
   cursor: pointer;
 }
 
+@keyframes bigsprite {
+  100% {
+    background-position: -168px;
+  }
+}
 *,
 *::after,
 *::before {
@@ -94,6 +103,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: roboto;
 }
 
 a {
@@ -104,6 +114,10 @@ a {
 
 button {
   cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
 
 .vignettesgrille {
@@ -211,8 +225,9 @@ button {
   display: flex;
   flex-direction: column;
 }
-.vignette__titlebox h3 {
+.vignette__titlebox--weight {
   font-size: 16px;
+  font-weight: 600;
 }
 .vignette__nouveau {
   position: absolute;
@@ -236,6 +251,25 @@ button {
   .vignette__nouveau {
     margin: 10px 0px 0px 180px;
   }
+}
+
+.boutton {
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  padding: 13px 20px 13px 20px;
+  box-shadow: 3px 2px 10px;
+}
+
+.boutton :hover {
+  box-shadow: 3px 2px 10px rgb(148, 146, 146);
+  background: linear-gradient(180deg, #f798dc 0%, #986bcf 100%);
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  padding: 13px 20px 13px 20px;
+  box-shadow: 3px 2px 10px;
 }
 
 .headerhomepage {
@@ -317,7 +351,7 @@ button {
     gap: 84px;
   }
 }
-.footer__flex-font {
+.footer__flex--font {
   color: #fff;
   font-size: 16px;
   font-family: Shrikhand;
@@ -462,7 +496,7 @@ button {
   }
 }
 .nav__boutton {
-  font-size: nouveau 13px;
+  font-size: footer-size 13px;
   border-radius: 20px;
   border: none;
   background-color: #f0efef;
@@ -490,7 +524,7 @@ button {
   align-items: center;
   gap: 15px;
   color: #000000;
-  font-size: nouveau 13px;
+  font-size: footer-size 13px;
 }
 @media screen and (min-width: 600px) {
   .nav__boutton--orga {
@@ -503,6 +537,9 @@ button {
   .nav__boutton--orga {
     gap: 25px;
   }
+}
+.nav__boutton p {
+  font-weight: 500;
 }
 .nav__boutton i {
   color: #c0c0c0;
@@ -634,6 +671,7 @@ button {
 .menu__titre {
   display: flex;
   justify-content: center;
+  gap: 20px;
   font-size: 16px;
   font-family: Shrikhand;
   width: 110%;
@@ -746,13 +784,13 @@ button {
   transform: translateX(-100%);
 }
 .menu__bell--circle {
-  opacity: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 45%;
   margin: auto;
   color: #fff;
+  rotate: 200deg;
+  transition: 0.1s ease-in;
+  scale: 1.5;
 }
 .menu__bell--prix {
   transition: 0.3s ease-in;
@@ -763,19 +801,12 @@ button {
   transition: 0.5s ease-in;
 }
 .menu .menu__box:hover .menu__bell--circle {
-  opacity: 1;
+  rotate: 0deg;
+  transition: 0.7s ease-in;
 }
 .menu .menu__box:hover .menu__bell--prix {
   transition: 0.5s ease-in;
   transform: translateX(-130%);
-}
-.menu__boutton {
-  border-radius: 50px;
-  border: none;
-  color: #fff;
-  padding: 13px 30px 13px 30px;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-  cursor: pointer;
 }
 
 .reservation {
@@ -809,12 +840,6 @@ button {
 .reservation__boutton {
   margin-bottom: 20px;
   margin-top: 20px;
-  border-radius: 50px;
-  border: none;
-  color: #fff;
-  padding: 13px 20px 13px 20px;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-  cursor: pointer;
 }
 
 .fonctionnement {

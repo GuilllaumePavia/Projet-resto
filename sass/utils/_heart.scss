@@ -2,22 +2,24 @@
 
 /* Les coeurs*/ 
 .heart {
-    background-image: url("../../Images\ et\ textes\ Ohmyfood/images/logo/heart-outline.svg");
+    background-image: url("../imagesEtTextesOhmyfood/images/logo/sprite.svg");
     width: 29px;
     height: 28px;
     background-repeat: no-repeat;
-    background-size: cover;
     transition: background-image 0.3s ease-in;
-    
     position: relative;
-    top: -10px;
-   
     
-   
-  
+
     &:hover{
-        background-image: url("../../Images\ et\ textes\ Ohmyfood/images/logo/heart.svg");
+        animation: sprite 1s steps(4);
         cursor: pointer;
     }
    
+}
+
+@keyframes sprite{
+0%{}
+100%{
+    background-position: -168px;
+}
 }
