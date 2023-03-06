@@ -1,28 +1,35 @@
 /* Le loader */
 .loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  animation: apparition 3s linear;
+}
+
+.circle {
   border: 16px solid #bdc3c7;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  top: 40%;
-  left: 30%;
-  position: fixed;
   animation: chargeur 3s linear;
   opacity: 0;
 }
-@media screen and (min-width: 600px) {
-  .loader {
-    left: 40%;
-    top: 30%;
-  }
-}
-@media screen and (min-width: 900px) {
-  .loader {
-    left: 45%;
-    top: 45%;
-  }
-}
 
+@keyframes apparition {
+  0% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+}
 @keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(1);
@@ -72,8 +79,8 @@
 /* Les coeurs*/
 .bigheart {
   background-image: url("../imagesEtTextesOhmyfood/images/logo/sprite.svg");
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   background-repeat: no-repeat;
   transition: background-image 0.3s ease-in;
   position: relative;
@@ -254,22 +261,19 @@ ul {
 }
 
 .boutton {
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border-radius: 50px;
   border: none;
   color: #fff;
   padding: 13px 20px 13px 20px;
-  box-shadow: 3px 2px 10px;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  cursor: pointer;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.464);
+  font-weight: 500;
 }
 
-.boutton :hover {
-  box-shadow: 3px 2px 10px rgb(148, 146, 146);
+.boutton:hover {
   background: linear-gradient(180deg, #f798dc 0%, #986bcf 100%);
-  border-radius: 50px;
-  border: none;
-  color: #fff;
-  padding: 13px 20px 13px 20px;
-  box-shadow: 3px 2px 10px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.737);
 }
 
 .headerhomepage {
@@ -674,9 +678,8 @@ ul {
   gap: 20px;
   font-size: 16px;
   font-family: Shrikhand;
-  width: 110%;
+  width: 100%;
   padding-left: 20px;
-  padding-right: 20px;
 }
 @media screen and (min-width: 600px) {
   .menu__titre {
@@ -685,7 +688,7 @@ ul {
 }
 @media screen and (min-width: 900px) {
   .menu__titre {
-    gap: 25px;
+    gap: 15px;
   }
 }
 .menu__titre i {

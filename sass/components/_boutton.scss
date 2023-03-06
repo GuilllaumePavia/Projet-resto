@@ -1,10 +1,16 @@
 .boutton {
-    @include btn2(active);
-   
+    border-radius: nth($radius, 2);
+    border: none;
+    color: $colour-white;
+    padding: $padding2;
+    background: $gradient;
+    cursor: pointer;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.464);
+    font-weight: 500;
 }
 
-.boutton :hover {
-    @include shadow;
-    @include btn2(hover);
+.boutton:hover {
+    background: $gradient2;  
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.737);
 }
 

@@ -1,24 +1,38 @@
 /* Le loader */
-.loader {
+
+.loader{
+position: fixed;
+width: 100vw;
+height: 100vh;
+background-color: white;
+z-index: 2;
+display: flex;
+justify-content: center;
+align-items: center;
+display:flex;
+visibility: hidden;
+animation : apparition 3s linear;
+}
+
+
+.circle {
     border: 16px solid #bdc3c7;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    top: 40%;
-    left: 30%;
-    position: fixed;
     animation: chargeur 3s linear;
-    opacity: 0;
+    opacity: 0;  
+}
 
-    @include tablette-only {
-        left: 40%;
-        top: 30%;
-    }
+@keyframes apparition{
+0%{
+    visibility: visible;
+}
+99%{
+    visibility: visible; 
+}
 
-    @include desktop-only {
-        left: 45%;
-        top: 45%;
-    }
+
 }
 
 @keyframes chargeur {
