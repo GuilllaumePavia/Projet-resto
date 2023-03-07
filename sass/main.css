@@ -234,7 +234,10 @@ ul {
 }
 .vignette__titlebox--weight {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
+}
+.vignette__titlebox--soustitre {
+  font-weight: 200;
 }
 .vignette__nouveau {
   position: absolute;
@@ -246,6 +249,7 @@ ul {
   background-color: #99E2D0;
   color: #388572;
   font-size: 13px;
+  font-weight: 200;
 }
 @media screen and (min-width: 600px) {
   .vignette__nouveau {

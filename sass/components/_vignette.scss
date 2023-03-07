@@ -100,7 +100,10 @@
      
         &--weight {
             font-size: map-get($font-size, titre-plat);
-            font-weight: 600;   
+            font-weight: 500;   
+        }
+        &--soustitre {
+            font-weight: 200;   
         }
     }
 
@@ -115,6 +118,7 @@
         background-color: $colour-hover;
         color: #388572;
         font-size: map-get($font-size, footer-size);
+        font-weight: 200;
 
         @include tablette-only {
             position: absolute;
