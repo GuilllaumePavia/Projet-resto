@@ -1,9 +1,20 @@
-@mixin btndeux {
+@mixin btn {
     font-size: nth($font-size, 1);
     border-radius: nth($radius, 1);
     border: none;
     background-color: $colour-quaternaire;
     @include shadow;
+    cursor: pointer;
+}
+
+@mixin btn-nouveau {
+    width: 50px;
+    border-radius: 3px;
+    padding: 5px 15px 3px 15px;
+    background-color: $colour-hover;
+    color: #388572;
+    font-weight: 400;
+    font-size: map-get($font-size, footer-size);
     cursor: pointer;
 }
 

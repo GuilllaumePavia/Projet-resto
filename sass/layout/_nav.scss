@@ -20,7 +20,7 @@
     }
 
    &__boutton {
-        @include btndeux;
+        @include btn;
         width: clamp(100px, 100%, 240px);
         position: relative;
         display: flex;

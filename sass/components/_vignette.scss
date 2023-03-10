@@ -111,23 +111,14 @@
     &__nouveau {
         position: absolute;
         right: 0px;
-        margin: 20px 45px 0px 0px;
-        width: 50px;
-        border-radius: 3px;
-        padding: 5px 20px 3px 20px;
-        background-color: $colour-hover;
-        color: #388572;
-        font-size: map-get($font-size, footer-size);
-        font-weight: 200;
+        margin: 5% 12% 5% 5%;
+        @include btn-nouveau;
+        
 
-        @include tablette-only {
-            position: absolute;
-            left: 0px;
-            margin-top: 20px;
-        }
-
+       
         @include desktop-only {
-            margin: 10px 0px 0px 180px;
+          
+            margin: 5% 5% 5% 5%; 
         }
 
     }

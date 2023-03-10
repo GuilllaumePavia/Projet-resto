@@ -242,25 +242,19 @@ ul {
 .vignette__nouveau {
   position: absolute;
   right: 0px;
-  margin: 20px 45px 0px 0px;
+  margin: 5% 12% 5% 5%;
   width: 50px;
   border-radius: 3px;
-  padding: 5px 20px 3px 20px;
+  padding: 5px 15px 3px 15px;
   background-color: #99E2D0;
   color: #388572;
+  font-weight: 400;
   font-size: 13px;
-  font-weight: 200;
-}
-@media screen and (min-width: 600px) {
-  .vignette__nouveau {
-    position: absolute;
-    left: 0px;
-    margin-top: 20px;
-  }
+  cursor: pointer;
 }
 @media screen and (min-width: 900px) {
   .vignette__nouveau {
-    margin: 10px 0px 0px 180px;
+    margin: 5% 5% 5% 5%;
   }
 }
 
