@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   background-color: white;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,7 @@
 }
 /* Les coeurs*/
 .heart {
-  background-image: url("../imagesEtTextesOhmyfood/images/logo/sprite.svg");
+  background-image: url("../imagesEtTextesOhmyfood/images/logo/heart-outline.svg");
   width: 29px;
   height: 28px;
   background-repeat: no-repeat;
@@ -67,36 +67,27 @@
   position: relative;
 }
 .heart:hover {
-  animation: sprite 1s steps(4);
+  background-image: url("../imagesEtTextesOhmyfood/images/logo/heart.svg");
   cursor: pointer;
 }
 
-@keyframes sprite {
-  100% {
-    background-position: -168px;
-  }
-}
 /* Les coeurs*/
 .bigheart {
-  background-image: url("../imagesEtTextesOhmyfood/images/logo/sprite.svg");
-  width: 25px;
-  height: 25px;
+  background-image: url("../imagesEtTextesOhmyfood/images/logo/heart-outline.svg");
+  width: 65px;
+  height: 65px;
   background-repeat: no-repeat;
   transition: background-image 0.3s ease-in;
   position: relative;
-  scale: 1.5;
-  top: 15px;
+  top: 30px;
+  left: 20px;
+  transform: scale(1.8, 1.8);
 }
 .bigheart:hover {
-  animation: bigsprite 1s steps(4);
   cursor: pointer;
+  background-image: url("../imagesEtTextesOhmyfood/images/logo/heart.svg");
 }
 
-@keyframes bigsprite {
-  100% {
-    background-position: -168px;
-  }
-}
 *,
 *::after,
 *::before {
@@ -157,6 +148,7 @@ ul {
   box-shadow: 1px 1px 9px rgb(148, 146, 146);
   width: 100%;
   background-color: #fff;
+  position: relative;
 }
 @media screen and (min-width: 600px) {
   .vignette {
@@ -175,7 +167,6 @@ ul {
     flex-direction: column;
     width: 100%;
     height: 200px;
-    position: relative;
   }
 }
 .vignette__image-container {
@@ -201,19 +192,6 @@ ul {
   height: 100%;
   object-fit: cover;
   margin-top: -30px;
-}
-@media screen and (min-width: 900px) {
-  .vignette__image-container img {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    align-items: flex-start;
-    font-size: 18px;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    margin-top: -30px;
-    font-weight: 500;
-  }
 }
 .vignette__texte-container {
   display: flex;
@@ -243,6 +221,7 @@ ul {
   position: absolute;
   right: 0px;
   margin: 5% 12% 5% 5%;
+  z-index: 2;
   width: 50px;
   border-radius: 3px;
   padding: 5px 15px 3px 15px;
@@ -252,9 +231,14 @@ ul {
   font-size: 13px;
   cursor: pointer;
 }
+@media screen and (min-width: 600px) {
+  .vignette__nouveau {
+    margin: 5% 6% 5% 5%;
+  }
+}
 @media screen and (min-width: 900px) {
   .vignette__nouveau {
-    margin: 5% 5% 5% 5%;
+    margin: 5% 6% 5% 5%;
   }
 }
 
@@ -498,7 +482,6 @@ ul {
   }
 }
 .nav__boutton {
-  font-size: footer-size 13px;
   border-radius: 20px;
   border: none;
   background-color: #f0efef;
@@ -507,9 +490,11 @@ ul {
   width: clamp(100px, 100%, 240px);
   position: relative;
   display: flex;
-  gap: 0px;
+  align-items: center;
+  gap: 20px;
   padding: 15px;
   padding-left: 40px;
+  font-size: 13px;
 }
 @media screen and (min-width: 600px) {
   .nav__boutton {
@@ -519,43 +504,10 @@ ul {
 @media screen and (min-width: 900px) {
   .nav__boutton {
     padding-left: 35px;
+    gap: 30px;
   }
 }
-.nav__boutton--orga {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  color: #000000;
-  font-size: footer-size 13px;
-}
-@media screen and (min-width: 600px) {
-  .nav__boutton--orga {
-    font-size: 14px;
-    font-weight: 400;
-    gap: 20px;
-  }
-}
-@media screen and (min-width: 900px) {
-  .nav__boutton--orga {
-    gap: 25px;
-  }
-}
-.nav__boutton p {
-  font-weight: 500;
-}
-.nav__boutton i {
-  color: #c0c0c0;
-  scale: 1.4;
-}
-.nav__boutton:hover i {
-  color: #9356DC;
-}
-.nav__boutton:hover {
-  background-color: rgba(213, 182, 255, 0.6);
-  box-shadow: 3px 2px 8px rgb(39, 39, 39);
-}
-
-.navnumero {
+.nav__boutton--navnumero {
   position: absolute;
   left: -10px;
   bottom: 0;
@@ -570,6 +522,21 @@ ul {
   background-color: #9356DC;
   border-radius: 50px;
   color: #fff;
+}
+.nav__boutton p {
+  font-weight: 500;
+  color: black;
+}
+.nav__boutton i {
+  color: #c0c0c0;
+  transform: scale(1.4, 1.4);
+}
+.nav__boutton:hover i {
+  color: #9356DC;
+}
+.nav__boutton:hover {
+  background-color: rgba(213, 182, 255, 0.6);
+  box-shadow: 3px 2px 8px rgb(39, 39, 39);
 }
 
 .localisation {
@@ -674,25 +641,24 @@ ul {
   display: flex;
   justify-content: center;
   gap: 20px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: Shrikhand;
   width: 100%;
   padding-left: 20px;
 }
 @media screen and (min-width: 600px) {
   .menu__titre {
-    gap: 15px;
+    gap: 30px;
   }
 }
 @media screen and (min-width: 900px) {
   .menu__titre {
-    gap: 15px;
+    gap: 30px;
   }
 }
 .menu__titre i {
   height: 30%;
   margin-top: 8px;
-  scale: 1.5;
 }
 .menu__plat {
   align-self: flex-start;
@@ -789,9 +755,8 @@ ul {
   top: 45%;
   margin: auto;
   color: #fff;
-  rotate: 200deg;
+  transform: rotate(200deg);
   transition: 0.1s ease-in;
-  scale: 1.5;
 }
 .menu__bell--prix {
   transition: 0.3s ease-in;
@@ -802,7 +767,8 @@ ul {
   transition: 0.5s ease-in;
 }
 .menu .menu__box:hover .menu__bell--circle {
-  rotate: 0deg;
+  transform: rotate(0deg);
+  transform: scale(2, 2);
   transition: 0.7s ease-in;
 }
 .menu .menu__box:hover .menu__bell--prix {

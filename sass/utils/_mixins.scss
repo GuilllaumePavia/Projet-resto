@@ -1,5 +1,4 @@
 @mixin btn {
-    font-size: nth($font-size, 1);
     border-radius: nth($radius, 1);
     border: none;
     background-color: $colour-quaternaire;

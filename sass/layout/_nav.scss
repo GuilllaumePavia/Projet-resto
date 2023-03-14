@@ -5,7 +5,6 @@
     justify-content: center;
     gap: 15px;
     
-    
     @include tablette-only {
         display: flex;
         flex-direction: row;
@@ -15,8 +14,7 @@
 
     @include desktop-only {
         align-items: center;
-        gap: 20px;
-       
+        gap: 20px;  
     }
 
    &__boutton {
@@ -24,52 +22,49 @@
         width: clamp(100px, 100%, 240px);
         position: relative;
         display: flex;
-        gap: 0px;
+        align-items: center;
+        gap: 20px;
         padding: 15px;
         padding-left: 40px;
+        font-size: 13px;
         
-       
-
         @include tablette-only {
             padding-left: 25px;
         }
 
         @include desktop-only {
             padding-left: 35px;
+            gap: 30px;
         }
 
-       
-        
-        
-    &--orga{
+        &--navnumero {
+            position: absolute;
+            left: -10px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 15px;
-            color: $colour-black;
-        font-size: nth($font-size, 1);
-       
-       
-        @include tablette-only {
-            font-size: 14px;
-            font-weight: 400;
-             gap:20px;
-          }
-
-          @include desktop-only {
-             gap:25px;
-          }
-
-          
-       }
+            font-size: map-get($font-size, numero-size);
+            background-color: $colour-primaire;
+            border-radius: 50px;
+            color: $colour-white;
+        }
    }
 
-   &__boutton p {
+    &__boutton p {
     font-weight: 500;
-}
+    color: black;
+    
+   }
 
     &__boutton i {
         color: #c0c0c0;
-        scale: 1.4;
+        transform: scale(1.4, 1.4)
+
     }
 
     &__boutton:hover i {
@@ -80,25 +75,9 @@
         background-color: $colour-hover-violet;
         box-shadow: $shadow3 rgb(39, 39, 39);
     }
+
+    
 }
 
 
-.navnumero {
-    position: absolute;
-    left: -10px;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: map-get($font-size, numero-size);
-    background-color: $colour-primaire;
-    border-radius: 50px;
-    color: $colour-white;
-   
 
-
-}

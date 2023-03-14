@@ -79,7 +79,7 @@
         display: flex;
         justify-content: center;
         gap:20px;
-        font-size: 16px;
+        font-size: 18px;
         font-family: Shrikhand;
         width: 100%;
         padding-left: 20px;
@@ -87,11 +87,11 @@
         
 
         @include tablette-only {
-          gap: 15px; 
+          gap: 30px; 
         }
 
         @include desktop-only {
-          gap: 15px;  
+          gap: 30px;  
         }
 
         
@@ -100,7 +100,6 @@
     &__titre i {
         height: 30%;
         margin-top: 8px;
-        scale: 1.5;
     }
 
     &__plat {
@@ -198,14 +197,13 @@
 
 
     &--circle{
-    
     position: absolute;
     top: 45%;
     margin: auto;
     color: $colour-white;
-    rotate:200deg;
+    transform: rotate(200deg);
     transition: 0.1s ease-in;
-    scale: 1.5;
+    
     }
 
     &--prix{
@@ -217,12 +215,11 @@
     opacity: 1;
     left: 100%;
     transition: .5s ease-in;
-    
-  
 }
 
 .menu__box:hover .menu__bell--circle {
-    rotate:0deg;
+    transform: rotate(0deg);
+    transform: scale(2, 2);
     transition: .7s ease-in;
 }
 
